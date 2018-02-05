@@ -31,7 +31,10 @@ function makeWebsite(){
     console.log(nounList[0]);
     setHeaders(randomPick3());
   }
+  document.getElementById("MainItem").style.backgroundImage = 'url("")';
+
   document.getElementById("MainItem").style.backgroundImage = 'url("https://picsum.photos/800/200?random")';
+
 }
 
 function randomPick3(){
