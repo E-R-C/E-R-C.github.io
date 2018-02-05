@@ -1,4 +1,6 @@
 // Write JavaScript here
+nounList = [];
+
 function setHeaders(wordList){
   // Capitalize Everything
   for(var i = 0; i < wordList.length; i++){
@@ -22,21 +24,38 @@ function updateWord(word, theClass){
   console.log(elements);
 }
 
-function makeWebsite(callback){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function(){
-    var result = [];
-    if (this.readyState == 4 && this.status== 200){
-      var jsonObj = JSON.parse('{"r":'+ this.responseText + "}");
-      for(var i = 0; i < jsonObj.r.length; i++){
-        result.push(jsonObj.r[i].word);
-      }
-      callback(result);
-    }
-  };
-  xhttp.open("GET", "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&includePartOfSpeech=noun&minCorpusCount=1&maxCorpusCount=-1&minDictionaryCount=25&maxDictionaryCount=-1&minLength=3&maxLength=-1&sortBy=alpha&limit=3&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5", true);
-  xhttp.send();
+function makeWebsite(){
+  // var xhttp = new XMLHttpRequest();
+  // xhttp.onreadystatechange = function(){
+  //   var result = [];
+  //   if (this.readyState == 4 && this.status== 200){
+  //     var jsonObj = JSON.parse('{"r":'+ this.responseText + "}");
+  //     for(var i = 0; i < jsonObj.r.length; i++){
+  //       result.push(jsonObj.r[i].word);
+  //     }
+  //     callback(result);
+  //   }
+  // };
+  // xhttp.open("GET", "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&includePartOfSpeech=noun&minCorpusCount=1&maxCorpusCount=-1&minDictionaryCount=25&maxDictionaryCount=-1&minLength=3&maxLength=-1&sortBy=alpha&limit=3&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5", true);
+  // xhttp.send();
+  if (nounList.length === 0){
+    getNounsString("nounList.txt");
+  } else {
+      setHeaders(randomPick3);
+  }
   document.getElementById("MainItem").style.backgroundImage = 'url("https://picsum.photos/800/200?random")';
+}
+
+function randomPick3(){
+  result = []
+  for (var i = 0; i < 3; i++){
+    var index = Math.floor(Math.random() * nounList.length);
+    result.push(nounList[index]);
+  };
+  return randomPick3;
+}
+function nounListCallback(responseText){
+  nounList = nounStringToList(responseText);
 }
 function changeFonts(){
   document.body.style.fontFamily = fontArrays[counter];
@@ -47,3 +66,17 @@ var counter = 0;
 var fontArrays = ["'Rammetto One', cursive", '"Comic Sans MS", cursive, sans-serif', "'Libre Barcode 39', cursive", "'Indie Flower', cursive",
 "'Dosis', sans-serif", "'Anton', sans-serif", "'Libre Baskerville', serif", "'Fjalla One', sans-serif"
 ];
+function getNounsString(fileName, callback){
+  var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function(){
+  if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+    callback(xmlhttp.responseText);
+  }
+};
+xmlhttp.open("GET", fileName, true);
+xmlhttp.send();
+}
+
+function nounStringToList(nounString){
+  return nounString.split("\n");
+}
