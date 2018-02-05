@@ -7,18 +7,20 @@ function setHeaders(wordList){
   headerValue = wordList.join(" ");
 
   var items = document.getElementsByClassName("headerVal");
-  for(var i = 0; i < items.length; i++){
-    items[i].innerText = headerValue;
+  for(var k = 0; k < items.length; k++){
+    items[k].innerText = headerValue;
   }
-  updateWord(wordList[0], "word1")
-  updateWord(wordList[1], "word2")
-  updateWord(wordList[2], "word3")
+  updateWord(wordList[0], "word1");
+  updateWord(wordList[1], "word2");
+  updateWord(wordList[2], "word3");
 }
 function updateWord(word, theClass){
   elements = document.getElementsByClassName(theClass);
-  for(x in elements){
-    x.innerText = word;
+  for(var x = 0; x < elements.length; x++){
+    console.log(x);
+    elements[x].innerText = word;
   }
+  console.log(elements);
 }
 
 function makeWebsite(callback){
