@@ -25,21 +25,8 @@ function updateWord(word, theClass){
 }
 
 function makeWebsite(){
-  // var xhttp = new XMLHttpRequest();
-  // xhttp.onreadystatechange = function(){
-  //   var result = [];
-  //   if (this.readyState == 4 && this.status== 200){
-  //     var jsonObj = JSON.parse('{"r":'+ this.responseText + "}");
-  //     for(var i = 0; i < jsonObj.r.length; i++){
-  //       result.push(jsonObj.r[i].word);
-  //     }
-  //     callback(result);
-  //   }
-  // };
-  // xhttp.open("GET", "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&includePartOfSpeech=noun&minCorpusCount=1&maxCorpusCount=-1&minDictionaryCount=25&maxDictionaryCount=-1&minLength=3&maxLength=-1&sortBy=alpha&limit=3&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5", true);
-  // xhttp.send();
   if (nounList.length === 0){
-    getNounsString("nounList.txt");
+    getNounsString("nounlist.txt");
   } else {
       setHeaders(randomPick3);
   }
