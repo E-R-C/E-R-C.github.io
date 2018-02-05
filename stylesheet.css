@@ -16,7 +16,7 @@
 }
 #MainItem {
   /* background-color: blue; */
-  background-image: url("https://picsum.photos/800/200?random");
+  background-image: none;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

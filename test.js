@@ -21,20 +21,18 @@ function updateWord(word, theClass){
   for(var x = 0; x < elements.length; x++){
     elements[x].innerText = word;
   }
-  console.log(elements);
 }
 
 function makeWebsite(){
   if (nounList.length === 0){
     getNounsString("nounlist.txt", nounListCallback);
   } else {
-    console.log(nounList[0]);
     setHeaders(randomPick3());
   }
   needsImageList = document.getElementsByClassName("needsImage");
-  console.log(needsImageList);
-  for(var x = 0; x < needsImageList; x++){
+  for(var x = 0; x < needsImageList.length; x++){
     needsImageList[x].style.backgroundImage = 'url("https://picsum.photos/400/200?image=' + Math.floor(Math.random() * 600) + '")';
+    console.log(needsImageList[x].style.backgroundImage);
   }
   document.getElementById("MainItem").style.backgroundImage = 'url("https://picsum.photos/800/200?image=' + Math.floor(Math.random() * 600) + '")';
 
@@ -47,7 +45,6 @@ function randomPick3(){
     var index = Math.floor(Math.random() * nounList.length);
     result.push(nounList[index]);
   };
-  console.log(result);
   return result;
 }
 function nounListCallback(responseText){
