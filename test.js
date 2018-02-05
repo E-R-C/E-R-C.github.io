@@ -40,7 +40,7 @@ function randomPick3(){
     var index = Math.floor(Math.random() * nounList.length);
     result.push(nounList[index]);
   };
-  return randomPick3;
+  return result;
 }
 function nounListCallback(responseText){
   nounList = nounStringToList(responseText);
