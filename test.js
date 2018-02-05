@@ -28,7 +28,8 @@ function makeWebsite(){
   if (nounList.length === 0){
     getNounsString("nounlist.txt", nounListCallback);
   } else {
-      setHeaders(randomPick3);
+    console.log(nounList[0]);
+    setHeaders(randomPick3);
   }
   document.getElementById("MainItem").style.backgroundImage = 'url("https://picsum.photos/800/200?random")';
 }
