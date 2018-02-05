@@ -26,7 +26,7 @@ function updateWord(word, theClass){
 
 function makeWebsite(){
   if (nounList.length === 0){
-    getNounsString("nounlist.txt");
+    getNounsString("nounlist.txt", nounListCallback);
   } else {
       setHeaders(randomPick3);
   }
