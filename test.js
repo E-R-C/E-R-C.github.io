@@ -31,9 +31,13 @@ function makeWebsite(){
     console.log(nounList[0]);
     setHeaders(randomPick3());
   }
-  document.getElementById("MainItem").style.backgroundImage = 'url("")';
+  needsImageList = document.getElementsByClassName("needsImage");
+  console.log(needsImageList);
+  for(var x = 0; x < needsImageList; x++){
+    needsImageList[x].style.backgroundImage = 'url("https://picsum.photos/400/200?image=' + Math.floor(Math.random() * 600) + '")';
+  }
+  document.getElementById("MainItem").style.backgroundImage = 'url("https://picsum.photos/800/200?image=' + Math.floor(Math.random() * 600) + '")';
 
-  document.getElementById("MainItem").style.backgroundImage = 'url("https://picsum.photos/800/200?random")';
 
 }
 
