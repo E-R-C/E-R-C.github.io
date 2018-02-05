@@ -40,6 +40,7 @@ function randomPick3(){
     var index = Math.floor(Math.random() * nounList.length);
     result.push(nounList[index]);
   };
+  console.log(result);
   return result;
 }
 function nounListCallback(responseText){
