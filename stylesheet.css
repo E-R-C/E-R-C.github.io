@@ -5,7 +5,9 @@
   color: black;
   margin-right: 10px;
 }
-
+.ctr {
+  align-content: center;
+}
 #MainItem {
   /* background-color: blue; */
   background-image: url("https://picsum.photos/800/200?random");
@@ -15,10 +17,11 @@
 }
 
 #MainText{
-  margin: 10px 10px 10px 10px;
+  /* margin: 10px 10px 10px 10px; */
   padding: 10px 10px 10px 10px; /* top right bot left;*/
   background-color: rgba(255,255,255,0.7);
   text-align: center;
+  align-self: center;
 }
 .vertical-center {
 
