@@ -17,7 +17,6 @@ function setHeaders(wordList){
 function updateWord(word, theClass){
   elements = document.getElementsByClassName(theClass);
   for(var x = 0; x < elements.length; x++){
-    console.log(x);
     elements[x].innerText = word;
   }
   console.log(elements);
@@ -34,7 +33,7 @@ function makeWebsite(callback){
       }
       callback(result);
     }
-  }
+  };
   xhttp.open("GET", "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&includePartOfSpeech=noun&minCorpusCount=1&maxCorpusCount=-1&minDictionaryCount=25&maxDictionaryCount=-1&minLength=3&maxLength=-1&sortBy=alpha&limit=3&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5", true);
   xhttp.send();
   document.getElementById("MainItem").style.backgroundImage = 'url("https://picsum.photos/800/200?random")';
@@ -46,5 +45,5 @@ function changeFonts(){
 }
 var counter = 0;
 var fontArrays = ["'Rammetto One', cursive", '"Comic Sans MS", cursive, sans-serif', "'Libre Barcode 39', cursive", "'Indie Flower', cursive",
-"'Dosis', sans-serif", "'Anton', sans-serif", "'Libre Baskerville', serif", "'Fjalla One', sans-serif",
- ]
+"'Dosis', sans-serif", "'Anton', sans-serif", "'Libre Baskerville', serif", "'Fjalla One', sans-serif"
+];
