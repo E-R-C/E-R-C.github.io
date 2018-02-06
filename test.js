@@ -31,7 +31,7 @@ function makeWebsite(){
   }
   needsImageList = document.getElementsByClassName("needsImage");
   for(var x = 0; x < needsImageList.length; x++){
-    needsImageList[x].style.backgroundImage = 'url("https://picsum.photos/400/200?image=' + Math.floor(Math.random() * 600) + '")';
+    needsImageList[x].style.backgroundImage = 'url("https://picsum.photos/400/200?image=' + Math.floor(Math.random() * 500) + '")';
     console.log(needsImageList[x].style.backgroundImage);
   }
   document.getElementById("MainItem").style.backgroundImage = 'url("https://picsum.photos/800/200?image=' + Math.floor(Math.random() * 600) + '")';
