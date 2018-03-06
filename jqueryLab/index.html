@@ -1,2 +1,103 @@
 <!DOCTYPE html>
-<h1>Hello World!</h1>
+<head>
+  <title>Random Generator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheet.css";
+  <meta charset="utf-8"/>
+
+</head>
+
+<body>
+  <nav class="navbar blk">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">Random Generator</a>
+      </div>
+      <ul class="nav">
+        <li>
+           <a href = "../index.html">3 Nouns</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <!-- Title  -->
+      <div class="col-md-12">
+        <h1>Randomly Generate Things</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          An example page to showcase API calls using JQuery
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="greyBack">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="center">Trivia Question</h2>
+        <button class="center" id="newQ">New Question</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3> <span id="Category">First Trivia </span> Question</h3>
+        <p id="questionText">
+          Temporary Question?
+        </p>
+        <p>
+          Correct: <span id="correct_score">0</span> </br>
+          Incorrect: <span id="wrong_score">0</span>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+        <button id="TrueButton" class="button">True</button>
+      </div>
+      <div class="col-md-1">
+        <button id="FalseButton" class="button">False</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="greyBack2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class=center>Pomeranians</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button id="doggoButton">New Doggo</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="center">
+          <img class="doggo" />
+        </br>
+          <img class="doggo2" />
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="QuestionHandler.js"></script>
+<script src="DogPic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>

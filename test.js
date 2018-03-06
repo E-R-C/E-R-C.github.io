@@ -1,4 +1,4 @@
-// Write JavaScript here
+// This was done withotu jquery, which is scary.
 nounList = [];
 
 function setHeaders(wordList){
@@ -22,6 +22,10 @@ function updateWord(word, theClass){
     elements[x].innerText = word;
   }
 }
+function URLify(string) {
+  return string.trim().replace(/\s/g, '%20');
+}
+
 
 function makeWebsite(){
   if (nounList.length === 0){
@@ -31,12 +35,10 @@ function makeWebsite(){
   }
   needsImageList = document.getElementsByClassName("needsImage");
   for(var x = 0; x < needsImageList.length; x++){
-    needsImageList[x].style.backgroundImage = 'url("https://picsum.photos/400/200?image=' + Math.floor(Math.random() * 500) + '")';
+    needsImageList[x].style.backgroundImage = 'url("https://picsum.photos/400/200?image=' + Math.floor(Math.random() * 200) + '")';
     console.log(needsImageList[x].style.backgroundImage);
   }
   document.getElementById("MainItem").style.backgroundImage = 'url("https://picsum.photos/800/200?image=' + Math.floor(Math.random() * 600) + '")';
-
-
 }
 
 function randomPick3(){
